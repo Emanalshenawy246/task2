@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bottle Game</title>
+    
+</head>
+<body>
+    
+    
+   
+
+    <div>
+        <button>input </button> 
+        <p>["ahmed", "islam", "sandra", "Fatma", "Ali"]</p>
+    </div>
+
+    <button onclick="namef()">output</button>
+
+    <div  id="result"></div>
+
+    <script>
+        function namef() {
+            
+            var namesP = ["ahmed", "islam", "sandra", "Fatma", "Ali"];
+            
+          
+            var x = Math.floor(Math.random() * namesP.length);
+            var  y;
+            
+            do {
+                y = Math.floor(Math.random() * namesP.length);
+            } 
+            while (y === x);
+            
+            var Names = [namesP[x], namesP[y]];
+        
+            document.getElementById('result').innerText = 'Output array: ["' + Names.concat('"]');
+        }
+    </script>
+</body>
+</html>
